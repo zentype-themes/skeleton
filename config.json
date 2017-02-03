@@ -1,0 +1,65 @@
+{
+  "name": "cocoa",
+  "title": "Cocoa",
+  
+  "metadatum" : {
+    "google-analytics" : {
+      "title": "Google Analytics ID",
+      "desc": "Analyse visits with Google Analytics.",
+      "help": "Provide a Universal Analytics number, such as 'UA-12345678-1'"
+    },
+    "github-handle" : {
+      "title": "GitHub Handle",
+      "desc": "Add a link to your GitHub account from the social box and from the top menu bar.",
+      "help": "Provide your GitHub handle only, not a link. e.g. chilts, not https://github.com/chilts."
+    },
+    "twitter-handle" : {
+      "title": "Twitter Handle",
+      "desc": "Add a link to your Twitter account from the social box and from the top menu bar.",
+      "help": "Provide your Twitter handle only, not a link. e.g. 'andychilton', not 'https://twitter.com/andychilton'."
+    }
+  },
+  "option": {
+    "front-page-image" : {
+      "title": "",
+      "desc": "Show an image on your index page, i.e. \"/\".",
+      "help": "To show an image on your homepage, this options needs to be turned on and an image uploaded into the \"Front Page\" option."
+    }
+  },
+  "image": {
+    "logo": {
+      "title": "Logo",
+      "desc": "Upload your logo to be shown at the top of every page.",
+      "help": "Your logo should be in the ratio 2:3, e.g. 600x400 pixels, or 1920x1280. It will be cropped/resized to 150x100 pixels.",
+      "size": {
+        "width" : 150,
+        "height" : 100
+      }
+    },
+    "front-page": {
+      "title": "Front Page",
+      "desc": "An image to be used on your homepage.",
+      "help": "You should upload an image large enough to cover a 1920x1080 screen. The image will be used as-is and stretched in the browser (not cropped or resized when uploaded).",
+      "ratio" : {
+        "#" : "Can be used instead of the above. Won't be resized, but will be cropped.",
+        "width": 3,
+        "height": 2
+      }
+    }
+  },
+  "menu": {
+    "top-nav": {
+      "name": "top-nav",
+      "title": "Top Navigation",
+      "allow-multi-level": false,
+      "max": 7
+    },
+    "links-box": {
+      "name": "links-box",
+      "title": "Links Box",
+      "desc": "The Links Box shows your links in a hierarchical list in the right-hand column.",
+      "help": "This widget allows multi-level lists, but it's best to keep to only two levels.",
+      "allow-multi-level": true
+    }
+  }
+}
