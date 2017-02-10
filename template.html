@@ -10,6 +10,7 @@
     <link rel="icon" href="/s/i/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://{{ .Site.Domain.DomainName }}/rss.xml" rel="alternate" type="application/rss+xml" title="{{ .Site.Domain.Title }}">
     <link href="https://{{ .Site.Domain.DomainName }}/atom.xml" rel="alternate" type="application/atom+xml" title="{{ .Site.Domain.Title }}">
     <style rel="stylesheet">a { text-decoration: none; }</style>
@@ -52,6 +53,32 @@
 
     <section style="width: 960px; margin: auto; padding: 20px 10px;">
 
+      <div style="width: 25%; float: right; margin: 0 0 20px 20px; padding: 25px; border: 1px solid #ddd; border-radius: 10px;">
+        <h4 style="margin-top: 0;">Yeah!</h4>
+        <h5>Social</h5>
+        <p>
+          {{ with index .Site.Metadatum "github-handle" }}
+            <a target="_blank" href="https://github.com/{{ .Value }}/"><i class="fa fa-github"></i></a>
+          {{ end }}
+          {{ with index .Site.Metadatum "twitter-handle" }}
+            <a target="_blank" href="https://twitter.com/{{ .Value }}"><i class="fa fa-twitter"></i></a>
+          {{ end }}
+          {{ with index .Site.Metadatum "facebook-handle" }}
+            <a target="_blank" href="https://www.facebook.com/{{ .Value }}"><i class="fa fa-facebook"></i></a>
+          {{ end }}
+          {{ with index .Site.Metadatum "instagram-handle" }}
+            <a target="_blank" href="https://www.instagram.com/{{ .Value }}/"><i class="fa fa-instagram"></i></a>
+          {{ end }}
+          {{ with index .Site.Metadatum "reddit-handle" }}
+            <a target="_blank" href="https://www.reddit.com/user/{{ .Value }}"><i class="fa fa-reddit"></i></a>
+          {{ end }}
+        </p>
+        <h5>Share</h5>
+        <p>
+          <a href="/rss.xml"><i class="fa fa-rss"></i></a>
+        </p>
+      </div>
+
 <!-- ---------------------------------------------------------------------- -->
 <!-- 1. index pages -->
 
@@ -59,7 +86,7 @@
         <li>
           <a href="{{ .Url }}">{{ .Title }}</a>
           <br>
-          <small>{{ .Published.Format "02 Jan 2006" }}</small>
+          <span style="font-size: small;">{{ .Published.Format "02 Jan 2006" }}</span>
         </li>
       {{ end }}
 
@@ -72,8 +99,10 @@
       {{ end }}
 
       {{ if or (eq .Type "index") (eq .Type "category") (eq .Type "tag") (eq .Type "author") (eq .Type "archive") (eq .Type "year") (eq .Type "month") }}
-        <h2>{{ .Header }}</h2>
-        {{ template "post-list" .Posts }}
+        <article>
+          <h2>{{ .Header }}</h2>
+          {{ template "post-list" .Posts }}
+        </article>
       {{ end }}
 
 <!-- ---------------------------------------------------------------------- -->
@@ -83,10 +112,10 @@
         <article>
           <h2>{{ .Post.Title }}</h2>
           <h3>{{ .Post.SubTitle }}</h3>
-          <p>By <a href="/author/{{ .Post.Author.AuthorName }}/">{{ or .Post.Author.Fullname .Post.Author.AuthorName }}</a></p>
+          <p>By <a href="/author/{{ .Post.AuthorName }}/">{{ .Post.AuthorName }}</a></p>
           <div>{{ .Post.Summary }}</div>
           <div>{{ .Post.Html }}</div>
-          <p style="text-align: right;">
+          <p style="text-align: right; font-size: small;">
             {{ .Post.Published.Format "02 Jan 2006" }}
             <br>
             Category: <a href="/category/{{ .Post.CategoryName }}/">{{ .Post.CategoryName }}</a>.
@@ -110,12 +139,13 @@
 <!-- ---------------------------------------------------------------------- -->
 
     </section>
+    <div style="clear: both;"></div>
 
 <!-- ---------------------------------------------------------------------- -->
 <!-- 4. footer -->
 
     <footer class="header" style="padding: 20px; background-color: #eee; border-top: 1px solid #ddd;">
-      <div style="text-align: center;">
+      <div style="text-align: center; font-size: small;">
         <a href="https://zentype.com/">Blog Hosted by ZenType</a>.
       </div>
     </footer>

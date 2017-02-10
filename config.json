@@ -17,7 +17,22 @@
       "title": "Twitter Handle",
       "desc": "Add a link to your Twitter account from the social box and from the top menu bar.",
       "help": "Provide your Twitter handle only, not a link. e.g. 'andychilton', not 'https://twitter.com/andychilton'."
-    }
+    },
+    "facebook-handle" : {
+      "title": "Facebook Handle",
+      "desc": "Add a link to your Facebook account from the social box and from the top menu bar.",
+      "help": "Provide your Facebook username only, not a link. e.g. 'Your.Name.Here', not 'https://www.facebook.com/Your.Name.Here'."
+    },
+    "instagram-handle" : {
+      "title": "Instagram Handle",
+      "desc": "Add a link to your Instagram account from the social box and from the top menu bar.",
+      "help": "Provide your Instagram handle only, not a link. e.g. 'thechilts', not 'https://instagram.com/thechilts'."
+    },
+    "reddit-handle" : {
+      "title": "Reddit Handle",
+      "desc": "Add a link to your Reddit account from the social box and from the top menu bar.",
+      "help": "Provide your Reddit handle only, not a link. e.g. 'thechilts', not 'https://reddit.com/user/thechilts'."
+    },
   },
   "option": {
     "front-page-image" : {
