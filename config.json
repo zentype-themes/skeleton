@@ -1,6 +1,6 @@
 {
-  "name": "cocoa",
-  "title": "Cocoa",
+  "name": "skeleton",
+  "title": "Skeleton",
   
   "metadatum" : {
     "google-analytics" : {
@@ -32,12 +32,12 @@
       "title": "Reddit Handle",
       "desc": "Add a link to your Reddit account from the social box and from the top menu bar.",
       "help": "Provide your Reddit handle only, not a link. e.g. 'thechilts', not 'https://reddit.com/user/thechilts'."
-    },
+    }
   },
   "option": {
     "front-page-image" : {
-      "title": "",
-      "desc": "Show an image on your index page, i.e. \"/\".",
+      "title": "Font Page Image",
+      "desc": "Show an image on your index page, i.e. \"\/\".",
       "help": "To show an image on your homepage, this options needs to be turned on and an image uploaded into the \"Front Page\" option."
     }
   },
